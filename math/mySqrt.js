@@ -38,7 +38,25 @@ function mySqrtV1(n) {
 }
 
 
-// 官方，二分查找
+// 云动魔方 手写题
+
+function sqort(n) {
+	if(n < 4) {
+		return 1;
+	} else {
+		for(let i = 2; i < n; i++) {
+			let tmp = i * i;
+			if(tmp > n) {
+				return i - 1;
+			} else if (tmp === n) {
+				return i;
+			} else {
+				continue;
+			}
+		}
+	}
+
+}
 
 
 const res = mySqrtV1(num)
